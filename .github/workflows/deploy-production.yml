@@ -16,6 +16,10 @@ jobs:
       - name: Deploy Application
         run: |
           set -e
+          echo "Current directory: $(pwd)"
+          echo "Listing current directory contents:"
+          ls -la
+
           cd C:\xampp\htdocs\VergolaPerth
           
           echo "Checking path"
@@ -23,8 +27,8 @@ jobs:
             echo "Path does not exist: C:\xampp\htdocs\VergolaPerth"
             exit 1
           fi
-
+    
           echo "Pulling latest updates"
           git pull origin main
-
+    
           echo "Deployment steps completed successfully"
