@@ -20,13 +20,15 @@ jobs:
           echo "Listing current directory contents:"
           ls -la
 
-          cd C:\xampp\htdocs\VergolaPerth
+          DEPLOY_PATH="C:/xampp/htdocs/VergolaPerth"
           
           echo "Checking path"
-          if [ ! -d "C:\xampp\htdocs\VergolaPerth" ]; then
-            echo "Path does not exist: C:\xampp\htdocs\VergolaPerth"
+          if [ ! -d "$DEPLOY_PATH" ]; then
+            echo "Path does not exist: $DEPLOY_PATH"
             exit 1
           fi
+
+          cd "$DEPLOY_PATH"
     
           echo "Pulling latest updates"
           git pull origin main
