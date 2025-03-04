@@ -15,7 +15,7 @@ jobs:
 
       - name: Deploy Application
         run: |
-          cd C:/xampp/htdocs/prod/github  # Project path
+          cd C:/xampp/htdocs/VergolaPerth  # Project path
 
           # git config --global user.email "jezraelsalino@gmail.com"
           # git config --global user.name "JezraelSalino"
