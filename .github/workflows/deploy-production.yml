@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, staging]
+    runs-on: [self-hosted, runner-staging-vergolaperth]
 
     steps:
       - name: Checkout Repository
