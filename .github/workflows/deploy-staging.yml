@@ -17,8 +17,8 @@ jobs:
         run: |
           cd C:/xampp/htdocs/VergolaPerth  # Project path
 
-          git config --global user.email "jezraelsalino@gmail.com"
-          git config --global user.name "JezraelSalino"
+          # git config --global user.email "jezraelsalino@gmail.com"
+          # git config --global user.name "JezraelSalino"
 
           # Pull the latest updates from the repository for example
           git pull origin staging
