@@ -11,16 +11,20 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3  # Use the latest version of the checkout action
+        uses: actions/checkout@v3
 
       - name: Deploy Application
         run: |
-          cd C:\xampp\htdocs\VergolaPerth  # Project path
+          set -e
+          cd C:\xampp\htdocs\VergolaPerth
+          
+          echo "Checking path"
+          if [ ! -d "C:\xampp\htdocs\VergolaPerth" ]; then
+            echo "Path does not exist: C:\xampp\htdocs\VergolaPerth"
+            exit 1
+          fi
 
-          # git config --global user.email "jezraelsalino@gmail.com"
-          # git config --global user.name "JezraelSalino"
-
-          # Pull the latest updates from the repository for example
+          echo "Pulling latest updates"
           git pull origin main
 
-          # Add additional deployment steps here (e.g., build, restart services)
+          echo "Deployment steps completed successfully"
